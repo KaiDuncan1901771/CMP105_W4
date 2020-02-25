@@ -5,7 +5,9 @@
 #include "Framework/GameObject.h"
 #include <string.h>
 #include <iostream>
-
+#include "Player.h"
+#include "Enemy.h"
+#include "Background.h"
 
 class Level{
 public:
@@ -16,6 +18,8 @@ public:
 	void update(float dt);
 	void render();
 
+
+	
 private:
 	// Default functions for rendering to the screen.
 	void beginDraw();
@@ -28,5 +32,12 @@ private:
 	// Level objects
 	GameObject testSprite;
 	sf::Texture texture;
+	sf::Texture textureEnemy;
+	sf::Texture textureBackground;
+
+	Player player;
+	Enemy enemy;
+	Background background;
+	
 
 };
